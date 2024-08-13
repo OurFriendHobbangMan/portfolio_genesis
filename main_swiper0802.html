@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Font Awesome 아이콘 라이브러리 추가 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <style>
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+ul,li{
+  list-style: none;
+}
+
+a{
+  color: inherit; text-decoration: none;
+}
+
+    /* Swiper 컨테이너 스타일 */
+    .swiper-container {
+      width: 100%;
+      height: 900px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Swiper 슬라이드 스타일 */
+    .swiper-slide {
+      background-color: #fff;
+      width: 100%;
+      position: relative;
+      background-color: #111;
+      background-size: cover; /* 이미지 크기 조정 */
+      background-repeat: no-repeat; /* 이미지 반복 안함 */
+      background-position: center; /* 중앙에 배치 */
+    }
+
+    /* 슬라이드 텍스트 스타일 */
+    .slider_txt {
+      height: 300px;
+      position: absolute;
+      top: 135px;
+      left: 345px;
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transform: translateX(-500px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .swiper-slide-active .slider_txt {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+
+    /* 각 슬라이드에 백그라운드 이미지 설정 */
+    .slide_img .swiper-slide:nth-child(1) {
+      background-image: url(img/visual1.jpg);
+    }
+
+    .slide_img .swiper-slide:nth-child(2) {
+      background-image: url(img/visual2.jpg);
+    }
+
+    .slide_img .swiper-slide:nth-child(3) {
+      background-image: url(img/visual3.jpg);
+    }
+
+    .slide_img .swiper-slide:nth-child(4) {
+      background-image: url(img/visual4.jpg);
+    }
+
+    .slider_txt span {
+      display: block;
+      font-size: 25px;
+      font-weight: 200;
+      text-align: left;
+    }
+
+    .slider_txt h2 {
+      font-size: 80px;
+      font-weight: 300;
+      text-align: left;
+    }
+
+    /* 스와이퍼 페이지네이션 스타일 */
+    .swiper-pagination {
+      position: absolute;
+      bottom: 100px !important;
+    }
+
+    .swiper-pagination-bullet{background-color: #707070 !important;  margin-right: 12px !important; opacity:1 !important;}
+    .swiper-pagination-bullet-active{  background-color: transparent !important; border: 2px solid #fff; width: 12px; height: 12px; }
+
+    /* 컨트롤러 버튼 스타일 */
+    .swiper-button {
+      position: absolute;
+      bottom: 100px;
+      right: 46%;
+      z-index: 10;
+      cursor: pointer;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .swiper-button i {
+      pointer-events: none;
+    }
+
+.swiper-slide a{
+  display: block;
+  position: absolute;
+  bottom: 180px;
+  left: 340px;
+  color: #fff;
+}
+
+@keyframes ani{
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 80%;
+  }
+}
+
+.swiper-slide a span::after{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -3px;
+  width: 80%; height: 1px;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.swiper-slide a span:hover::after{
+  animation: ani linear 0.3s;
+  opacity: 1;
+}
+
+.swiper-slide a img{
+  width: 14px; height: auto;
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper slide_img">
+      <div class="swiper-slide">
+        <div class="slider_txt">
+          <span>GENESIS</span>
+          <h2>MAGMA</h2>
+        </div>
+        <a href="#"><span>더 알아보기</span>
+          <img src="img/arrow_forward_ios_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" alt="arrow">
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slider_txt">
+          <span>GENESIS</span>
+          <h2>X GRAN BERLINETTA │<br>X GRAN RACER CONCEPT</h2>
+        </div>
+        <a href="#"><span>더 알아보기</span>
+          <img src="img/arrow_forward_ios_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" alt="arrow">
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slider_txt">
+          <span>GENESIS</span>
+          <h2>ELECTRIFIED G80</h2>
+        </div>
+        <a href="#"><span>더 알아보기</span>
+          <img src="img/arrow_forward_ios_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" alt="arrow">
+        </a>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slider_txt">
+          <span>GENESIS</span>
+          <h2>NEOLUN CONCEPT</h2>
+        </div>
+        <a href="#"><span>더 알아보기</span>
+          <img src="img/arrow_forward_ios_16dp_FFFFFF_FILL0_wght400_GRAD0_opsz20.png" alt="arrow">
+        </a>
+      </div>
+    </div>
+
+    <div class="swiper_btn">
+
+    <div class="swiper-pagination"></div>    <!-- 컨트롤러 버튼 추가 -->
+    <div class="swiper-button" id="swiper-play-pause">
+      <i class="fas fa-pause"></i> <!-- 일시정지 아이콘으로 시작 -->
+    </div>
+
+  </div>
+
+
+
+  </div>
+
+  <script>
+    // Swiper 초기화
+    const swiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: false,
+      loopAdditionalSlides: 4,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+
+    // 재생 및 일시정지 버튼 컨트롤
+    const playPauseButton = document.getElementById('swiper-play-pause');
+    const playPauseIcon = playPauseButton.querySelector('i');
+
+    playPauseButton.addEventListener('click', () => {
+      if (swiper.autoplay.running) {
+        swiper.autoplay.stop();
+        playPauseIcon.classList.remove('fa-pause');
+        playPauseIcon.classList.add('fa-play');
+      } else {
+        swiper.autoplay.start();
+        playPauseIcon.classList.remove('fa-play');
+        playPauseIcon.classList.add('fa-pause');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
